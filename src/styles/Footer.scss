@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.footer-curve {
+    margin-top: -200px;
+    width: 100%;
+    path{
+      fill: #fff;
+    }
+  }
+
+div.footer-container {
+    margin-top: -60px;
+    padding-bottom: 20px;
+    background: linear-gradient(0deg, #c1aaf1 0%, #fff 100%);
+
+}
+
+.footer-header{
+    color: #23468C;
+    text-align: center;
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 0;
+}
+
+.footer-copyright{
+    font-family: Inter;
+    font-size: 12px;
+}
+
+.icon-button-container{
+    border-radius: 26px !important;
+    display: flex;
+    flex-wrap: wrap;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out; // Define the transition (property duration timing-function)
+    .icon-button-icon{
+        flex-basis: 100%;
+        width: 60px;
+        height:60px;
+        font-size: 60px;
+        transition: all 0.3s ease-in-out; 
+        color:#6C69BF;
+        path{
+            transition: all 0.3s ease-in-out; 
+            fill: #6C69BF;
+        }
+    }
+
+    .icon-button-text{
+        color: #23468C;
+        text-align: center;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 10px;
+    }
+
+    &:hover {
+        border-radius: 26px;
+        background: none !important;
+        transform: scale(1.1);
+        .icon-button-icon{
+            color:#373565;
+            path{
+                fill: #373565;
+            }
+        }
+    }
+    
+}
+div.footer-connect-conatiner{
+    margin-bottom: 70px;
+}

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.projects-title {
+    text-align: center;
+    margin-top: 0;
+    // Additional styles
+  }
+
+.project-page-outer-container{
+  background: linear-gradient(0deg,#C2A5FF,#fff);
+  padding-top: 80px;
+  padding-bottom: 210px;
+  .projects-title{
+    color: #0E1D73;
+    font-family: 'Inter';
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+  }
+  .projects-divider{
+    background-color: #0E1D73;
+    height: 3px;
+    width: 100%;
+    margin-bottom: 30px;
+    opacity: 20%;
+  }
+}
+
+div.project-card-container{
+  background: none;
+  box-shadow: none;
+  overflow: visible;
+  .project-card{
+    border-radius: 45px;
+    transition: transform 0.3s ease-in-out; // Define the transition (property duration timing-function)
+  }
+  .project-title{
+    color: #0E1D73;
+    text-align: left;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 633;
+    line-height: normal;
+    margin-top: -10px;
+  }
+  &:hover{
+    background: none;
+    box-shadow: none;
+    .overlay {
+      height: 100%; // Expand to full height on hover
+    }
+    .project-card {
+      transform: scale(1.05); // Optional: scale the image slightly on hover
+    }
+    .project-title{
+      background: none;
+      text-decoration: underline;
+    }
+    .MuiCardActionArea-focusHighlight{
+      background: none;
+    }
+  }
+}
+
+.media-container {
+  position: relative;
+  overflow: hidden; // Ensures the overlay respects the border-radius
+  border-radius: 45px; // Set your desired border-radius
+
+  .project-card {
+    width: 100%;
+    border-radius: 45px; // Set border-radius for the image
+    transition: transform 0.3s ease; // Optional: transition for hover effect on the image
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0; // Start with height 0
+    background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black background
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; // Ensure content doesn't spill outside during animation
+    transition: height 0.3s ease; // Transition for height
+  }
+
+  &:hover {
+    .overlay {
+      height: 100%; // Expand to full height on hover
+    }
+    .project-card {
+      transform: scale(1.05); // Optional: scale the image slightly on hover
+    }
+  }
+
+  .overlay-text {
+    color: white;
+    text-align: center;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    // Additional styling for your text
+  }
+}
+
+div.category-chip {
+  margin-right: 5px; // Spacing between chips
+  margin-bottom: 5px; // Spacing below each chip, if they wrap to a new line
+  background-color: #6C69BF;
+  color:#fff;
+  // Add more styling as needed
+}
+
+.project-page-chips{
+  margin-bottom: 10px;
+  margin-left: -5px;
+}

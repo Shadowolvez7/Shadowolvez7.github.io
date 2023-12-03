@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.homepage-title {
+  text-align: center;
+  // Additional styles
+}
+
+.intro-outer-container{
+  padding-top: 60px;
+  height: calc(80vh + 200px);
+  background: linear-gradient(#D3C4F2, #ffffff);
+  padding-bottom: 200px;
+}
+
+.intro-container{
+  height: 100%;
+}
+
+.intro-section{
+  align-self: flex-end;
+  align-items: flex-end !important;
+  height: 100%;
+}
+
+.intro-left{
+  width: 60%;
+  padding-bottom: 60px;
+}
+
+.intro-right{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-self: center;
+  width: 40%;
+}
+
+.featured-outer-container{
+  background: #23468C;
+  padding-bottom: 150px;
+}
+
+.placeholder-circle-top{
+  width: 100%;
+}
+
+.title{
+  color: #0E1D73;
+  font-family: 'Inter';
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 40%;
+}
+
+.subtitle{
+  color: #404040;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  width: 60%;
+  padding-bottom: 20px;
+  line-height: 1.4;
+}
+
+button.mywork-button{
+  width: 120px;
+  height: 50px;
+  border-radius: 17px;
+  margin-right: 40px;
+  background-color: #23468C;
+  border: none;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  &:hover {
+    background-color: #142b5a;
+  }
+}
+
+button.aboutme-button{
+  width: 120px;
+  height: 50px;
+  border-radius: 17px;
+  background-color: #6C69BF;
+  border: none;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  &:hover {
+    background-color: #434279;
+  }
+}
+
+.featured-top-curve {
+  margin-top: -200px;
+  width: 100%;
+  path{
+    fill: #23468C;
+  }
+}
+
+div.featured-work-section {
+  margin-top: -30px;
+}
+
+.featured-work-title{
+  color: #FFF;
+  text-align: left;
+  font-family: Inter;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 633;
+  line-height: normal;
+  margin-top: 0;
+}
+
+.featured-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a.see-all-projects-link{
+  text-transform: capitalize;
+  color: #D3C4F2;
+  text-align: right;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: normal;
+  border: none;
+  background: none;
+  box-shadow: none;
+  &:hover {
+    border: none;
+    background: none;
+    box-shadow: none;
+    background-color: #1f3e7c;
+  }
+}
+
+.project-title{
+  background: none;
+  h3{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 633;
+    line-height: normal;
+    margin-top: 10px;
+  }
+
+}
+
+div.project-card-container{
+  background: none;
+  box-shadow: none;
+  overflow: visible;
+  .project-card{
+    border-radius: 45px;
+    transition: transform 0.3s ease-in-out; // Define the transition (property duration timing-function)
+    
+  }
+  &:hover{
+    background: none;
+    box-shadow: none;
+    .project-card{
+      transform:scale(103%);
+      
+    }
+    .project-title{
+      background: none;
+    }
+    .MuiCardActionArea-focusHighlight{
+      background: none;
+    }
+  }
+}
+
+div.project-card-container {
+  background: none;
+  box-shadow: none;
+  overflow: hidden; // Ensures the overlay is contained within the card bounds
+  border-radius: 45px; // Set the border-radius here
+
+  .media-container {
+    position: relative;
+    overflow: hidden; // Keeps the overlay within the rounded corners
+    border-radius: 45px; // Ensure the image container also has rounded corners
+
+    .project-card {
+      border-radius: 45px; // Set border-radius for the image
+      transition: transform 0.3s ease-in-out; // Smooth transition for image scaling
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black background
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0; // Start with overlay hidden
+      overflow: hidden; // Ensure content doesn't spill outside during animation
+      height: 0; // Start with height 0
+      transition: all 0.3s ease; // Smooth transition for overlay
+    }
+
+    &:hover {
+      .overlay {
+        opacity: 1; // Show overlay on hover
+        height: 100%; // Expand to full height on hover
+      }
+      .project-card {
+        transform: scale(1.03); // Scale the image slightly on hover
+        height: 100%; // Expand to full height on hover
+        opacity: 1; // Show overlay on hover
+      }
+    }
+    
+  }
+  &:hover {
+    .overlay {
+      opacity: 1; // Show overlay on hover
+      height: 100%; // Expand to full height on hover
+    }
+    .project-card {
+      transform: scale(1.03); // Scale the image slightly on hover
+      height: 100%; // Expand to full height on hover
+      opacity: 1; // Show overlay on hover
+    }
+  }
+
+}
+
+div.featured-project-grid{
+  padding-top: 10px !important;
+}
+
+.featured-project-grid-container{
+  margin-top: 10px !important;
+}
+
+div.about-sabrina-section{
+  margin-top: 0 !important;
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-outer-container{
+  margin-top: -50px;
+  background: #6C69BF;
+  padding-bottom: 200px;
+}
+
+.about-top-curve {
+  margin-top: -200px;
+  margin-bottom: -20px;
+  width: 100%;
+  path{
+    fill: #6C69BF;
+  }
+}
+
+.placeholder-circle-about{
+  width:100%;
+  max-height: 500px;
+}
+
+.about-text-section{
+  width: 60%;
+  display: flex;
+  justify-items: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.about-image-section{
+  width: 40%;
+}
+
+.about-image{
+  width: 100%;
+  max-height: 500px;
+}
+
+.about-text-header{
+  width: 100%;
+  color: #FFF;
+  text-align: left;
+  font-family: Inter;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 633;
+  line-height: normal;
+  margin-bottom: 100px;
+}
+
+.about-text-description{
+  width: 100%;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-right: 50px;
+  line-height: 1.8;
+}

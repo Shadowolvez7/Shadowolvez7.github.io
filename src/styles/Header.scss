@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Header.scss */
+.header-container {
+    height: 0px;
+}
+  
+.header-logo {
+    cursor: pointer;
+    width: 50px;
+    // Add styles for your logo
+    position: absolute;
+    top: 4px;
+}
+
+.menu-button{
+    float:right;
+}
+
+
+.menu-overlay {
+    background: linear-gradient(0deg, #d3c4f29d 0%, #ffffff90 100%);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+    z-index: 1000; // Ensure it's above all other content
+    opacity: 0%;
+}
+
+.menu-overlay.active {
+    transform: translateY(0); // Slide down to show menu
+    opacity: 100%;
+}
+  
+// Transition the menu overlay into view when menuOpen is true
+.menu-open {
+    transform: translateY(0); // Slide down when active
+    opacity: 100%;
+}
+  
+.close-menu-icon {
+    position: absolute;
+    top: 10px;
+    font-size: 30px !important;
+    cursor: pointer;
+}
+
+a.menu-link{
+    color: #0E1D73;
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 633;
+    line-height: normal;
+    text-decoration: none;
+    margin-bottom: 20px;
+    border-radius: 17px;
+    padding: 5px 20px;
+    transition: all 0.3s ease-in-out;
+    transform:scale(1);
+    &:hover{
+        text-decoration: underline;
+        transform:scale(1.2);
+    }
+}
