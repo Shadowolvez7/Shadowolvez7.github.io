@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'variables';
 
 .projects-title {
     text-align: center;
@@ -8,23 +9,52 @@
 
 .project-page-outer-container{
   background: linear-gradient(0deg,#C2A5FF,#fff);
-  padding-top: 80px;
-  padding-bottom: 210px;
+  
+  @media (min-width: $breakpoint-xs) {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+  @media (min-width: $breakpoint-sm) {
+    padding-top: 80px;
+    padding-bottom: 150px;
+  }
+  @media (min-width: $breakpoint-md) {
+    padding-top: 80px;
+    padding-bottom: 210px;
+  }
   .projects-title{
     color: #0E1D73;
     font-family: 'Inter';
-    font-size: 45px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    text-align: left;
+
+    @media (min-width: $breakpoint-xs) {
+      font-size: 30px;
+      text-align: center;
+    }
+    @media (min-width: $breakpoint-sm) {
+      font-size: 38px;
+      text-align: left;
+    }
+    @media (min-width: $breakpoint-md) {
+      font-size: 45px;
+    }
   }
   .projects-divider{
     background-color: #0E1D73;
     height: 3px;
     width: 100%;
-    margin-bottom: 30px;
     opacity: 20%;
+    @media (min-width: $breakpoint-xs) {
+      margin-bottom: 15px;
+    }
+    @media (min-width: $breakpoint-sm) {
+      margin-bottom: 20px;
+    }
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -40,11 +70,19 @@ div.project-card-container{
     color: #0E1D73;
     text-align: left;
     font-family: Inter;
-    font-size: 20px;
     font-style: normal;
     font-weight: 633;
     line-height: normal;
     margin-top: -10px;
+    @media (min-width: $breakpoint-xs) {
+      font-size: 18px;
+    }
+    @media (min-width: $breakpoint-sm) {
+      font-size: 20px;
+    }
+    @media (min-width: $breakpoint-md) {
+      font-size: 20px;
+    }
   }
   &:hover{
     background: none;
@@ -103,11 +141,20 @@ div.project-card-container{
     color: white;
     text-align: center;
     font-family: Inter;
-    font-size: 25px;
+    
     font-style: normal;
     font-weight: 200;
     line-height: normal;
     // Additional styling for your text
+    @media (min-width: $breakpoint-xs) {
+      font-size: 20px;
+    }
+    @media (min-width: $breakpoint-sm) {
+      font-size: 20px;
+    }
+    @media (min-width: $breakpoint-md) {
+      font-size: 25px;
+    }
   }
 }
 

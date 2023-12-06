@@ -15,7 +15,7 @@ const Footer = () => {
           <h2 gutterBottom className="footer-header">
             Let's Connect!
           </h2>
-          <Stack direction="row" justifyContent="center" spacing={10} sx={{ mb: 4 }} className="footer-connect-conatiner">
+          <Stack direction="row" justifyContent="center" spacing={{xs: 0, sm: 5, md: 10}} sx={{ mb: 4 }} className="footer-connect-conatiner">
             <IconButton component="a" href="mailto:sabrina@castellanofam.com" className="icon-button-container">
               <EmailIcon className="icon-button-icon"/>
               <div variant="body2" className="icon-button-text">Email Me</div>

@@ -1,8 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'variables';
 
 .footer-curve {
     margin-top: -200px;
     width: 100%;
+    
+    position: relative;
+    @media (min-width: $breakpoint-xs) {
+        top: -48px;
+    }
+    @media (min-width: $breakpoint-sm) {
+        top: -35px;
+    }
+    @media (min-width: $breakpoint-md) {
+        top: -12px;
+    }
+    @media (min-width: $breakpoint-lg) {
+        top: 0px;
+    }
+    @media (min-width: $breakpoint-xl) {
+        top: 0px;
+        top: -10px;
+        transform: scaleY(.6);
+    }
     path{
       fill: #fff;
     }
@@ -12,18 +32,35 @@ div.footer-container {
     margin-top: -60px;
     padding-bottom: 20px;
     background: linear-gradient(0deg, #c1aaf1 0%, #fff 100%);
-
+    @media (min-width: $breakpoint-xs) {
+        margin-top: -60px;
+    }
+    @media (min-width: $breakpoint-sm) {
+        margin-top: -60px;
+    }
+    @media (min-width: $breakpoint-md) {
+        margin-top: -60px;
+    }
 }
 
 .footer-header{
     color: #23468C;
     text-align: center;
     font-family: Inter;
-    font-size: 35px;
+    
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     margin-top: 0;
+    @media (min-width: $breakpoint-xs) {
+        font-size: 25px;
+    }
+    @media (min-width: $breakpoint-sm) {
+        font-size: 30px;
+    }
+    @media (min-width: $breakpoint-md) {
+        font-size: 35px;
+    }
 }
 
 .footer-copyright{
@@ -37,13 +74,34 @@ div.footer-container {
     flex-wrap: wrap;
     transform: scale(1);
     transition: all 0.3s ease-in-out; // Define the transition (property duration timing-function)
+    @media (min-width: $breakpoint-xs) {
+        width: 75px;
+    }
+    @media (min-width: $breakpoint-sm) {
+        width: 150px;
+    }
+    @media (min-width: $breakpoint-md) {
+        width: 200px;
+    }
     .icon-button-icon{
         flex-basis: 100%;
-        width: 60px;
-        height:60px;
-        font-size: 60px;
         transition: all 0.3s ease-in-out; 
         color:#6C69BF;
+        @media (min-width: $breakpoint-xs) {
+            width: 35px;
+            height:35px;
+            font-size: 35px;
+        }
+        @media (min-width: $breakpoint-sm) {
+            width: 50px;
+            height:50px;
+            font-size: 50px;
+        }
+        @media (min-width: $breakpoint-md) {
+            width: 60px;
+            height:60px;
+            font-size: 60px;
+        }
         path{
             transition: all 0.3s ease-in-out; 
             fill: #6C69BF;
@@ -59,6 +117,15 @@ div.footer-container {
         font-weight: 400;
         line-height: normal;
         margin-top: 10px;
+        @media (min-width: $breakpoint-xs) {
+            font-size: 14px;
+        }
+        @media (min-width: $breakpoint-sm) {
+            font-size: 16px;
+        }
+        @media (min-width: $breakpoint-md) {
+            font-size: 18px;
+        }
     }
 
     &:hover {
@@ -75,5 +142,14 @@ div.footer-container {
     
 }
 div.footer-connect-conatiner{
-    margin-bottom: 70px;
+    
+    @media (min-width: $breakpoint-xs) {
+        margin-bottom: 30px;
+    }
+    @media (min-width: $breakpoint-sm) {
+        margin-bottom: 50px;
+    }
+    @media (min-width: $breakpoint-md) {
+        margin-bottom: 70px;
+    }
 }

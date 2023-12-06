@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'variables';
 
 .homepage-title {
   text-align: center;
@@ -6,80 +7,337 @@
 }
 
 .intro-outer-container{
-  padding-top: 60px;
-  height: calc(80vh + 200px);
+  
   background: linear-gradient(#D3C4F2, #ffffff);
-  padding-bottom: 200px;
-}
 
-.intro-container{
-  height: 100%;
+  @media (min-width: $breakpoint-sm) {
+    padding-top: 45px;
+    padding-bottom: 80px;
+    height: calc(65vw);
+  }
+  @media (min-width: $breakpoint-md) {
+    padding-top: 60px;
+    height: calc(80vh + 150px);
+    padding-bottom: 200px;
+  }
+  @media (min-width: $breakpoint-lg) {
+    padding-top: 60px;
+    height: calc(80vh + 280px);
+    padding-bottom: 200px;
+  }
+  @media (min-width: $breakpoint-xl) {
+    padding-top: 60px;
+    height: 850px;
+    padding-bottom: 200px;
+  }
 }
 
 .intro-section{
   align-self: flex-end;
   align-items: flex-end !important;
   height: 100%;
+  width: 100%;
 }
 
 .intro-left{
-  width: 60%;
-  padding-bottom: 60px;
+  
+  @media (min-width: $breakpoint-xs) {
+    
+    width: 100%;
+    padding-bottom: 65px;
+  }
+  @media (min-width: $breakpoint-sm) {
+    padding-top: 40px;
+    width: 60%;
+    padding-bottom: 30px;
+  }
+  @media (min-width: $breakpoint-md) {
+    padding-top: 0px;
+    width: 60%;
+    padding-bottom: 30px;
+  }
+  
+}
+
+.intro-right-portal{
+  position: absolute;
+  transform-origin: left;
+  @media (min-width: $breakpoint-xs) {
+    left: -13%;
+    width: 76%;
+  }
+  @media (min-width: $breakpoint-sm) {
+    left: -50%;
+    width: 90%;
+  }
+  @media (min-width: $breakpoint-md) {
+    left: -55%;
+    width: 80%;
+  }
 }
 
 .intro-right{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   align-self: center;
-  width: 40%;
+  
+  @media (min-width: $breakpoint-xs) {
+    width: 100%;
+  }
+  @media (min-width: $breakpoint-sm) {
+    width: 40%;
+  }
+  @media (min-width: $breakpoint-md) {
+    width: 40%;
+  }
 }
 
 .featured-outer-container{
   background: #23468C;
-  padding-bottom: 150px;
+  @media (min-width: $breakpoint-xs) {
+    padding-bottom: 30px;
+  }
+  @media (min-width: $breakpoint-sm) {
+    padding-bottom: 50px;
+  }
+  @media (min-width: $breakpoint-md) {
+    padding-bottom: 150px;
+  }
+  
 }
 
-.placeholder-circle-top{
+.main-room{
   width: 100%;
+  margin-right: 45px;
+  position: relative;
+  @media (min-width: $breakpoint-xs) {
+    height: 96vw;
+    transform: translateX(75px);
+  }
+  @media (min-width: $breakpoint-sm) {
+    height: 38vw;
+    transform: translateX(-20px);
+  }
+  @media (min-width: $breakpoint-md) {
+    height: 41vw;
+    transform: translateX(0);
+  }
+  @media (min-width: $breakpoint-lg) {
+    height: 500px
+  }
+  @media (min-width: $breakpoint-xl) {
+    height: 500px;
+  }
+
+  .svg-room{
+    position: absolute;
+    width: 0;
+    bottom:0;
+    left: 0;
+    transition: all 1s ease-in-out;
+    transform: translate3D(0,0,0) rotate3d(0deg);
+    
+    opacity: 1;
+  }
+  .main-defaultCube{
+    left: 71%;
+    bottom: 51%;
+    width: 5%;
+    transition: all .5s ease-in-out;
+    &:hover,&:focus,&:active{
+      opacity: 0;
+    }
+  }
+  .main-art{
+    left: 3%;
+    bottom: 29%;
+    width: 31%;
+    &:hover{
+      transform: translate(-10%, 0);
+    }
+  }
+  .main-bookshelf{
+    left: 95%;
+    bottom: 0;
+    width: 75%;
+  }
+  .main-chair{
+    left: 39%;
+    width: 30%;
+    bottom: 13%;
+    &:hover{
+      transform: translate(-10%, 5%);
+    }
+  }
+  .main-computer{
+    width: 30%;
+    left: 60%;
+    bottom: 41%;
+  }
+  .main-desk{
+    left: 35%;
+    bottom: 14%;
+    width: 75%;
+  }
+  .main-keyboard{
+    left: 54%;
+    bottom: 38%;
+    width: 24%;
+    &:hover{
+      transform: translate(10%, 10%);
+    }
+  }
+  .main-lamp{
+    left: 25%;
+    bottom: 34%;
+    width: 31%;
+    &:hover{
+      transform: translate(-20%, -10%) scale(.9);
+    }
+  }
+  .main-mouse{
+    left: 74%;
+    bottom: 37%;
+    width: 7%;
+    &:hover{
+      transform: translate(0, -50%);
+    }
+  }
+  .main-plant{
+    left: -20%;
+    bottom: 20%;
+    width: 38%;
+    &:hover{
+      transform: translate3D(-100%,-20%,0);
+      opacity: 0;
+    }
+  }
+  .main-poster{
+    left: 78%;
+    bottom: 60%;
+    width: 25%;
+    &:hover{
+      transform: translate3D(0%,65%,0);
+    }
+  }
+  .main-tablet{
+    left: 44%;
+    bottom: 45%;
+    width: 14%;
+    &:hover{
+      transform: translate(0, -30%);
+    }
+  }
+  .main-dark-angel{
+    left: 120%;
+    bottom: 13%;
+    width: 20%;
+    &:hover{
+      transform: translate(-10%, -30%);
+    }
+  }
+  .main-vrHeadset{
+    left: 125%;
+    bottom: 60%;
+    width: 20%;
+    &:hover{
+      filter:blur(100px);
+    }
+  }
+  .main-rug{
+    width: 88%;
+    left: 4%;
+    bottom: -1%;
+    transition: all .3s ease-in-out;
+    &:hover{
+      transform: rotate3d(0, 1, 0, 20deg);
+    }
+  }
 }
 
 .title{
   color: #0E1D73;
   font-family: 'Inter';
-  font-size: 45px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  width: 40%;
+  
+  @media (min-width: $breakpoint-xs) {
+    width: 67%;
+    font-size: 30px;
+  }
+  @media (min-width: $breakpoint-sm) {
+    width: 55%;
+    font-size: 38px;
+  }
+  @media (min-width: $breakpoint-md) {
+    width: 50%;
+    font-size: 45px;
+  }
+  @media (min-width: $breakpoint-lg) {
+    width: 40%;
+  }
+
 }
 
 .subtitle{
   color: #404040;
   font-family: Inter;
-  font-size: 24px;
+  
   font-style: italic;
   font-weight: 400;
   line-height: normal;
-  width: 60%;
+  
   padding-bottom: 20px;
   line-height: 1.4;
+
+  @media (min-width: $breakpoint-xs) {
+    width: 100%;
+    font-size: 17px;
+  }
+  @media (min-width: $breakpoint-sm) {
+    width: 60%;
+    font-size: 18px;
+  }
+  @media (min-width: $breakpoint-md) {
+    width: 60%;
+    font-size: 24px;
+    padding-bottom: 30px;
+  }
 }
 
 button.mywork-button{
-  width: 120px;
-  height: 50px;
+  
   border-radius: 17px;
-  margin-right: 40px;
+  
   background-color: #23468C;
   border: none;
   color: #FFF;
   text-align: center;
   font-family: Inter;
-  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  @media (min-width: $breakpoint-xs) {
+    width: 110px;
+    height: 50px;
+    font-size: 14px;
+    margin-right: 15px;
+
+  }
+  @media (min-width: $breakpoint-sm) {
+    width: 115px;
+    font-size: 14px;
+  }
+  @media (min-width: $breakpoint-md) {
+    margin-right: 40px;
+    width: 120px;
+    height: 50px;
+    font-size: 16px;
+  }
 
   &:hover {
     background-color: #142b5a;
@@ -87,18 +345,30 @@ button.mywork-button{
 }
 
 button.aboutme-button{
-  width: 120px;
-  height: 50px;
   border-radius: 17px;
   background-color: #6C69BF;
   border: none;
   color: #FFF;
   text-align: center;
   font-family: Inter;
-  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  @media (min-width: $breakpoint-xs) {
+    width: 110px;
+    height: 50px;
+    font-size: 14px;
+  }
+  @media (min-width: $breakpoint-sm) {
+    width: 115px;
+    font-size: 14px;
+  }
+  @media (min-width: $breakpoint-md) {
+    width: 120px;
+    height: 50px;
+    font-size: 16px;
+  }
 
   &:hover {
     background-color: #434279;
@@ -108,6 +378,17 @@ button.aboutme-button{
 .featured-top-curve {
   margin-top: -200px;
   width: 100%;
+  position: relative;
+    
+  @media (min-width: $breakpoint-xs) {
+    top: -18px;
+  }
+  @media (min-width: $breakpoint-sm) {
+    top: -18px;
+  }
+  @media (min-width: $breakpoint-md) {
+    top: -18px;
+  }
   path{
     fill: #23468C;
   }
@@ -121,17 +402,30 @@ div.featured-work-section {
   color: #FFF;
   text-align: left;
   font-family: Inter;
-  font-size: 45px;
   font-style: normal;
   font-weight: 633;
   line-height: normal;
   margin-top: 0;
+  @media (min-width: $breakpoint-xs) {
+    font-size: 30px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  @media (min-width: $breakpoint-sm) {
+    width: 70%;
+    font-size: 38px;
+    margin-top: 15px;
+  }
+  @media (min-width: $breakpoint-md) {
+    font-size: 45px;
+  }
 }
 
 .featured-header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 a.see-all-projects-link{
@@ -146,6 +440,23 @@ a.see-all-projects-link{
   border: none;
   background: none;
   box-shadow: none;
+  @media (min-width: $breakpoint-xs) {
+    
+    font-size: 14px;
+    position: absolute;
+    right: -12px;
+    top: -8px;
+  }
+  @media (min-width: $breakpoint-sm) {
+    text-align: right;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    font-size: 20px;
+  }
+  @media (min-width: $breakpoint-md) {
+    font-size: 24px;
+  }
   &:hover {
     border: none;
     background: none;
@@ -160,11 +471,19 @@ a.see-all-projects-link{
     color: #FFF;
     text-align: center;
     font-family: Inter;
-    font-size: 24px;
     font-style: normal;
     font-weight: 633;
     line-height: normal;
     margin-top: 10px;
+    @media (min-width: $breakpoint-xs) {
+      font-size: 18px;
+    }
+    @media (min-width: $breakpoint-sm) {
+      font-size: 20px;
+    }
+    @media (min-width: $breakpoint-md) {
+      font-size: 24px;
+    }
   }
 
 }
@@ -270,13 +589,29 @@ div.about-sabrina-section{
 .about-outer-container{
   margin-top: -50px;
   background: #6C69BF;
-  padding-bottom: 200px;
+  @media (min-width: $breakpoint-xs) {
+    padding-bottom: 80px;
+  }
+  @media (min-width: $breakpoint-sm) {
+    padding-bottom: 150px;
+  }
+  @media (min-width: $breakpoint-md) {
+    padding-bottom: 200px;
+  }
 }
 
 .about-top-curve {
-  margin-top: -200px;
-  margin-bottom: -20px;
-  width: 100%;
+  @media (min-width: $breakpoint-xs) {
+    margin-bottom: 42px;
+    margin-top: -200px;
+    width: 100%;
+  }
+  @media (min-width: $breakpoint-sm) {
+    margin-bottom: 12px;
+  }
+  @media (min-width: $breakpoint-md) {
+    
+  }
   path{
     fill: #6C69BF;
   }
@@ -288,20 +623,116 @@ div.about-sabrina-section{
 }
 
 .about-text-section{
-  width: 60%;
   display: flex;
   justify-items: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
+  @media (min-width: $breakpoint-xs) {
+    width: 100%;
+  }
+  @media (min-width: $breakpoint-sm) {
+    width: 60%;
+  }
+  @media (min-width: $breakpoint-md) {
+
+  }
 }
 
 .about-image-section{
-  width: 40%;
+  @media (min-width: $breakpoint-xs) {
+    width: 100%;
+  }
+  @media (min-width: $breakpoint-sm) {
+    width: 40%;
+  }
+  @media (min-width: $breakpoint-md) {
+
+  }
 }
 
-.about-image{
+.about-container{
+  position: relative;
+  perspective: 1000px; // This gives a 3D space for the flip effect
+  .about-wrapper {
+    width: 100%;
+    max-height: 500px;
+    border-radius: 50%;
+    transform-style: preserve-3d; // This enables children to preserve their 3D position
+    transition: transform 1s;
+  }
+}
+
+.about-image,
+.about-svg {
   width: 100%;
   max-height: 500px;
+  backface-visibility: hidden; // This property hides the back side when it's turned away from the viewer
+  transition: transform 1s; // Adjust the time as needed for the flip speed
+  border-radius: 50%; // Makes the image circular
+  top: 0;
+  
+  @media (min-width: $breakpoint-xs) {
+    margin-top: 20px;
+  }
+  @media (min-width: $breakpoint-sm) {
+    margin-top: 50px;
+  }
+  @media (min-width: $breakpoint-md) {
+    margin-top: 0px;
+  }
+}
+
+.about-image {
+  transform: rotateY(0deg); // Start with the real image facing front
+}
+
+.about-svg {
+  transform: rotateY(180deg); // Start with the SVG facing away
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  .about-svg-background {
+    position: absolute;
+  }
+  .about-svg-witch {
+    top: 6%;
+    left: 5%;
+    width: 100%;
+    position: absolute;
+  }
+  .about-svg-cube {
+    top: 40%;
+    left: 7%;
+    width: 30%;
+    position: absolute;
+    animation: hoverCube 2s infinite ease-in-out;
+    transform: scale(0); // Start with the cube scaled down to 0
+    transition: transform 1s; // Sync with the flip transition
+  }
+}
+
+.about-container:hover .about-image {
+  transform: rotateY(-180deg);
+}
+
+.about-container:hover .about-svg {
+  transform: rotateY(0deg);
+}
+
+.about-container:hover .about-svg .about-svg-cube {
+  transform: scale(1); // Scale the cube back to its full size when the SVG is in front
+}
+
+// Define the hover animation for the cube
+@keyframes hoverCube {
+  0%, 100% {
+    transform: translateY(0) scale(1); // Cube at starting position and scaled to full size
+  }
+  50% {
+    transform: translateY(-40px) scale(1); // Cube moves up by 20px
+  }
 }
 
 .about-text-header{
@@ -309,21 +740,43 @@ div.about-sabrina-section{
   color: #FFF;
   text-align: left;
   font-family: Inter;
-  font-size: 45px;
   font-style: normal;
   font-weight: 633;
   line-height: normal;
-  margin-bottom: 100px;
+
+  @media (min-width: $breakpoint-xs) {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  @media (min-width: $breakpoint-sm) {
+    font-size: 38px;
+    margin-bottom: 40px;
+  }
+  @media (min-width: $breakpoint-md) {
+    font-size: 45px;
+    margin-bottom: 100px;
+  }
 }
 
 .about-text-description{
   width: 100%;
   color: #FFF;
   font-family: Inter;
-  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-right: 50px;
   line-height: 1.8;
+  @media (min-width: $breakpoint-xs) {
+    padding-right: 0px;
+    font-size: 18px;
+  }
+  @media (min-width: $breakpoint-sm) {
+    padding-right: 50px;
+    font-size: 18px;
+  }
+  @media (min-width: $breakpoint-md) {
+    padding-right: 50px;
+    font-size: 20px;
+  }
 }
+

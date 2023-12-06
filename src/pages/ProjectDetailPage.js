@@ -85,7 +85,12 @@ const ProjectDetailPage = () => {
           {carouselItems}
         </Carousel>
 
-        <Box display="flex" justifyContent="space-between" className="project-details-info">
+        <Box className="project-details-info" sx={{ 
+          display: 'flex', 
+          justifyContent: 'space-between', 
+          alignItems: 'center',
+          flexDirection: { xs: "column", sm: "row" },
+        }}>
           <Box className="project-details-left">
               {project.project_categories.split(',').map((category, index) => {
                 const color = categoryColors[category.trim()] || "#e0e0e0"; // Fallback color

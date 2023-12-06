@@ -1,12 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Container, Typography, Button, Grid, Card, CardActionArea, CardMedia, CardContent } from '@mui/material';
+import { Box, Container, Button, Grid, Card, CardActionArea, CardMedia, CardContent } from '@mui/material';
 import { parseCSVData } from '../utils/utilityFiles';
 import { Link as RouterLink } from 'react-router-dom';
-import {ReactComponent as PlaceholderCircle} from '../components/svgs/placeholder circle.svg';
+import PortalEffect from '../components/PortalEffect/PortalEffect';
 import {ReactComponent as Curve} from '../components/svgs/curve.svg';
 import {ReactComponent as ThreeDCube} from '../components/svgs/3d_cube_about.svg';
 import {ReactComponent as SabrinaWitch} from '../components/svgs/sabrina_witch_about.svg';
 import {ReactComponent as AboutBackground} from '../components/svgs/purple_circle_about.svg';
+import {ReactComponent as DefaultCube} from '../components/svgs/main-3d-cube.svg';
+import {ReactComponent as Art} from '../components/svgs/main-art.svg';
+import {ReactComponent as BookShelf} from '../components/svgs/main-book-shelf.svg';
+import {ReactComponent as Chair} from '../components/svgs/main-chair.svg';
+import {ReactComponent as Computer} from '../components/svgs/main-computer.svg';
+import {ReactComponent as Desk} from '../components/svgs/main-desk.svg';
+import {ReactComponent as Keyboard} from '../components/svgs/main-keyboard.svg';
+import {ReactComponent as Lamp} from '../components/svgs/main-lamp.svg';
+import {ReactComponent as Mouse} from '../components/svgs/main-mouse.svg';
+import {ReactComponent as Plant} from '../components/svgs/main-plant.svg';
+import {ReactComponent as Poster} from '../components/svgs/main-poster.svg';
+import {ReactComponent as Rug} from '../components/svgs/main-rug.svg';
+import {ReactComponent as Tablet} from '../components/svgs/main-tablet.svg';
+import {ReactComponent as DarkAngel} from '../components/svgs/main-the-dark-angel-trilogy.svg';
+import {ReactComponent as VrHeadset} from '../components/svgs/main-vr-headset.svg';
 import '../styles/HomePage.scss'; // Ensure this SCSS file is created and the path is correct
 
 const HomePage = () => {
@@ -31,23 +46,45 @@ const HomePage = () => {
       {/* Intro Section */}
       <div className="intro-outer-container">
         <Container className="intro-container">
-          <Box className="intro-section" sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Box className="intro-section" sx={{ 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            flexDirection: { xs: "column-reverse", sm: "row" },
+            alignItems: 'center' 
+          }}>
             <Box className="intro-left">
               <h1 className="title">
                 Hi my name is Sabrina!
               </h1>
               <div className="subtitle">
-                Blending imagination and polygons to create animated realities.
+                I weave magic into pixels, illuminating tales with digital artistry.
               </div>
               <Button variant="contained" onClick={() => scrollToRef(myWorkRef)} sx={{ mr: 1 }} className="mywork-button">
                 My Work
               </Button>
               <Button variant="outlined" onClick={() => scrollToRef(aboutMeRef)} className="aboutme-button">
                 About Me
-              </Button>
+              </Button>       
             </Box>
             <Box className="intro-right">
-              <PlaceholderCircle className="placeholder-circle-top"/>
+              <PortalEffect className="intro-right-portal" />
+              <div className="main-room">
+                <Poster className="svg-room main-poster"/>
+                <Rug className="svg-room main-rug" />
+                <Lamp className="svg-room main-lamp" />
+                <Art className="svg-room main-art" />
+                <Desk className="svg-room main-desk" />
+                <Chair className="svg-room main-chair" />
+                <Computer className="svg-room main-computer" />
+                <Keyboard className="svg-room main-keyboard" />
+                <Mouse className="svg-room main-mouse" />
+                <Tablet className="svg-room main-tablet" />
+                <DefaultCube className="svg-room main-defaultCube" />
+                <BookShelf className="svg-room main-bookshelf" />
+                <VrHeadset className="svg-room main-vrHeadset" />
+                <DarkAngel className="svg-room main-dark-angel" />
+                <Plant className="svg-room main-plant" />
+              </div>
             </Box>
           </Box>
         </Container>
@@ -59,7 +96,7 @@ const HomePage = () => {
         <Container className="featured-container">
           <Box ref={myWorkRef} className="featured-work-section" sx={{ my: 4 }}>
             <div className="featured-header">
-              <h2 variant="h3" gutterBottom className="featured-work-title">
+              <h2 variant="h3" className="featured-work-title">
                 Featured Work
               </h2>
               <Button variant="contained" component={RouterLink} to="/projects" sx={{ mb: 2 }} className="see-all-projects-link">
@@ -83,7 +120,7 @@ const HomePage = () => {
                         </div>
                       </div>
                       <CardContent className="project-title">
-                        <h3 gutterBottom component="div">
+                        <h3 component="div">
                           {project.project_title}
                         </h3>
                       </CardContent>
@@ -100,9 +137,14 @@ const HomePage = () => {
       <Curve className="about-top-curve"/>
       <div className="about-outer-container">
         <Container className="about-container">
-          <Box ref={aboutMeRef} className="about-sabrina-section" sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', my: 4 }}>
+          <Box ref={aboutMeRef} className="about-sabrina-section" sx={{ 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: 'center',
+            flexDirection: { xs: "column-reverse", sm: "row" },
+            my: 4 }}>
             <Box className="about-text-section">
-              <h2 variant="h3" gutterBottom className="about-text-header">
+              <h2 variant="h3" className="about-text-header">
                 About Sabrina
               </h2>
               <div className="about-text-description">
@@ -111,11 +153,13 @@ const HomePage = () => {
             </Box>
             <Box className="about-image-section">
               <div className='about-container'>
-                <img className="about-image" src="images/sabrina-headshot-transformed.png"/>
-                <div className='about-svg'>
-                  <SabrinaWitch className="about-svg-witch"/>
-                  <ThreeDCube className="about-svg-cube"/>
-                  <AboutBackground className="about-svg-background"/>
+                <div className='about-wrapper'>
+                  <img className="about-image" src="images/sabrina-headshot-transformed.png"/>
+                  <div className='about-svg'>
+                    <AboutBackground className="about-svg-background"/>
+                    <SabrinaWitch className="about-svg-witch"/>
+                    <ThreeDCube className="about-svg-cube"/>
+                  </div>
                 </div>
               </div>
             </Box>
