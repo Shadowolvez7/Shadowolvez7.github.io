@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page Not Found</title>
+  <script>
+    // Parses the URL to get the path
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    // Checks if the path is saved in sessionStorage
+    if (redirect && redirect != location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  </script>
+</head>
+<body>
+  <!-- Display a message or any content you like -->
+  <h1>Page not found</h1>
+  <p>We're sorry, the page you requested could not be found.</p>
+  <p>You will be redirected to the homepage.</p>
+  <script>
+    setTimeout(function() {
+      window.location.href = '/'; // Redirect to the home page or index.html
+    }, 100); // Wait for 5 seconds before redirecting
+  </script>
+</body>
+</html>
