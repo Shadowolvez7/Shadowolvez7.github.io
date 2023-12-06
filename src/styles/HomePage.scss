@@ -13,21 +13,18 @@
   @media (min-width: $breakpoint-sm) {
     padding-top: 45px;
     padding-bottom: 80px;
-    height: calc(65vw);
+    
   }
   @media (min-width: $breakpoint-md) {
     padding-top: 60px;
-    height: calc(80vh + 150px);
     padding-bottom: 200px;
   }
   @media (min-width: $breakpoint-lg) {
     padding-top: 60px;
-    height: calc(80vh + 280px);
     padding-bottom: 200px;
   }
   @media (min-width: $breakpoint-xl) {
     padding-top: 60px;
-    height: 850px;
     padding-bottom: 200px;
   }
 }
