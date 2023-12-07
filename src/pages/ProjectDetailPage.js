@@ -93,12 +93,13 @@ const ProjectDetailPage = () => {
         }}>
           <Box className="project-details-left">
               {project.project_categories.split(',').map((category, index) => {
-                const color = categoryColors[category.trim()] || "#e0e0e0"; // Fallback color
+                const color = categoryColors[category.trim()] || "#6C69BF"; // Fallback color
                 return (
                   <Chip
                     key={index}
                     label={category.trim()}
                     style={{ backgroundColor: color, color: 'white' }}
+                    className="category-chip" 
                   />
                 );
               })}

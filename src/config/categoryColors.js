@@ -5,6 +5,11 @@ const categoryColors = {
     Award: "#BFB16C", 
     "3D Sculpture": "#BF6C7D",
     Film: "#6C7DBF",
+    "Audio Editing": "#bf6caa",
+    "Graphic Design": "#4795c6",
+    Typography: "#103b69",
+    "Digital Art": "#924aea",
+    Animation: "#1d737d",
     // Add other categories and colors as needed
   };
   

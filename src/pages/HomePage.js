@@ -148,7 +148,7 @@ const HomePage = () => {
                 About Sabrina
               </h2>
               <div className="about-text-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Sabrina Castellano is a graphic design student at Hillsborough Community College, working towards an Associate in Arts degree. She has a passion for fantasy and plans to specialize in character design and animation at the University of Central Florida. Her inspiration comes from her time as a stay-at-home mom to her two boys. Sabrina's goal is to combine her love for fantasy with her design skills to create storytelling animations. When not studying or drawing, she enjoys reading, cooking, and rock climbing, which all fuel her creativity. Join her as she crafts magical worlds through her animations.
               </div>
             </Box>
             <Box className="about-image-section">

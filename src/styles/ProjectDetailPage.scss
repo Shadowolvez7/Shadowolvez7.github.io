@@ -125,6 +125,10 @@
     }
   }
 
+  img{
+    object-fit: contain !important;
+  }
+
   .MuiIndicator {
     display: none !important; // This hides the slide indicators
   }
@@ -343,4 +347,12 @@
       }
     }
   }
+}
+
+div.category-chip {
+  margin-right: 5px; // Spacing between chips
+  margin-bottom: 5px; // Spacing below each chip, if they wrap to a new line
+  background-color: #6C69BF;
+  color:#fff;
+  // Add more styling as needed
 }
