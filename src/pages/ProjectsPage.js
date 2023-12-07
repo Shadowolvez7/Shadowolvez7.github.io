@@ -26,7 +26,7 @@ const ProjectsPage = () => {
   return (
     <div className="project-page-outer-container">
       <Container>
-        <h1 variant="h2" className="projects-title">
+        <h1 className="projects-title">
           My Work
         </h1>
         <div className="projects-divider"/>
